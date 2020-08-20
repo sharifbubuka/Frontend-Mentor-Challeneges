@@ -184,12 +184,13 @@ body {
     background-color: var(--white);
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     border-radius: 10px;
   
   }
   
   .article > img {
-    max-height: 100px;
+    height: 200px;
     width: 300px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -209,6 +210,10 @@ body {
   
   .text {
     padding: 0;
+    height: fit-content;
+    margin-top: .8rem;
+    margin-right: .8rem;
+    margin-left: .8rem;
   }
   
   .article .text .article-heading {
@@ -220,31 +225,38 @@ body {
   
   .article .text .article-body {
     font-weight: var(--small-font-size);
-    font-size: .8rem;
-    line-height: 1rem;
+    font-size: .795rem;
+    line-height: 1.1rem;
     color: var(--Desaturated_dark_blue);
   }
   
   .article-footer {
     display: flex;
+    margin-top: 1rem;
+    padding-right: .8rem;
+    padding-left: .8rem;
+    align-items: center;
     justify-content: space-between;
-    padding-top: .2rem;
   }
   
   .left {
     display: flex;
+    align-items: center;
+    padding-right: .2rem;
   }
   
   .left .name, 
   .left .date {
-    font-size: .8rem;
+    font-size: .7rem;
   }
   
   .left img {
-    height: 50px;
-    width: 50px;
-    margin-right: 1rem;
-    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+  }
+
+  .writer-details {
+    line-height: 1rem;
   }
   
   .left .writer-details .name {
@@ -257,38 +269,26 @@ body {
   }
   
   .tooltip {
-    height: 2.5rem;
-    width: 12rem;
+    height: 60px;
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    border-radius: 10px;
-    padding-left: .4rem;
-    padding-right: .4rem;
     background-color: var(--Very_dark_grayish_blue);
-    position: relative;
-    left: 7.2rem;
-    top: -3.5rem;
-    box-shadow: 0px 10px 7px var(--Light_grayish_blue);
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    width: 77%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
   
   .invisible {
-    visibility: hidden;
-  }
-  
-  .visible {
-    visibility: visible;
+    display: none;
   }
   
   .tooltip::after {
-    content: " ";
-    position: absolute;
-    top: 100%; /* At the bottom of the tooltip */
-    left: 50%;
-    margin-left: -5px;
-    border-width: 10px;
-    border-style: solid;
-    border-color: var(--Very_dark_grayish_blue) transparent transparent transparent;
+    border-width: 0;
   }
   
   .tooltip-text {
@@ -296,6 +296,7 @@ body {
     font-family: var(--primary-font-family);
     font-size: .7rem;
     letter-spacing: .3rem;
+    margin-left: .8rem;
     color: var(--Desaturated_dark_blue);
   }
   
@@ -306,7 +307,7 @@ body {
   }
   
   .share {
-    background-color: var(--Desaturated_dark_blue);
+    background-color: var(--Light_grayish_blue);
     width: 30px;
     height: 30px;
     display: flex;
@@ -314,13 +315,11 @@ body {
     align-items: center;
     border-radius: 50%;
     position: relative;
-    top: 10px;
+    top: 6px;
     cursor: pointer;
   }
   
   .share i {
-    color: var(--Light_grayish_blue);
+    color: var(--Desaturated_dark_blue);
   }
-  
-  
 }

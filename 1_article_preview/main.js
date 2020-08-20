@@ -2,11 +2,16 @@ const share = document.getElementById('share');
 const tooltip = document.getElementById('tooltip');
 
 // On mouseover share button, show tooltip
-share.addEventListener('mouseover', () => {
+function show() {
   tooltip.classList.replace('invisible', 'visible');
-});
+  console.debug('Tool tip is visible now');
+}
 
 // On mouseout of share button, hide tooltip
-share.addEventListener('mouseout', () => {
-  tooltip.classList.replace('visible', 'invisible');
-});
+function hide() {
+  tooltip.classList.remove('display');
+  console.debug('Tool tip is visible now');
+}
+
+share.addEventListener('mouseover', show());
+share.addEventListener('mouseout', hide());
